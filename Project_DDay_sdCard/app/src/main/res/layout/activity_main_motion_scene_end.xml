@@ -30,12 +30,13 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@mipmap/line2"
+            android:background="#FFC2C2"
             android:fontFamily="@font/nanum_square_round_eb"
-            android:padding="10dp"
-            android:textAlignment="viewStart"
+            android:padding="8dp"
+            android:text="♡ ♡ ♡"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#D0141B36"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
