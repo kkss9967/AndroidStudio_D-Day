@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sample2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nanum_square_round_eb"
+        android:paddingTop="60dp"
+        android:text="정보를 입력하세요"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/myText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/nanum_square_round_b"
+        android:text="    나    "
+        android:textColor="#F19A9A"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/myText"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/myText"
+        android:backgroundTint="#F19A9A"
+        android:ems="8"
+        android:inputType="text"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/urText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="220dp"
+        android:fontFamily="@font/nanum_square_round_b"
+        android:text="    상   대 "
+        android:textColor="#F19A9A"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/urName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/urText"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/urText"
+        android:backgroundTint="#F19A9A"
+        android:ems="8"
+        android:inputType="text"
+        android:textAlignment="center" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp">
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#F19A9A"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:backgroundTint="#F19A9A"
+        android:fontFamily="@font/nanum_barunpen_b"
+        android:text=" 확   인 "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+</RelativeLayout>
