@@ -23,7 +23,7 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <activity android:name=".Second_Activity" android:label="D-Day Activity" />
+        <activity android:name=".Second_Activity" />
         <!-- android:launchMode="singleInstance"
         android:excludeFromRecents="true"
         android:taskAffinity="" !-->

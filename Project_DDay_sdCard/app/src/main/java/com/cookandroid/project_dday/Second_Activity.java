@@ -13,6 +13,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -46,7 +48,7 @@ public class Second_Activity extends AppCompatActivity {
     ImageView header_image;
     EditText my, ur;
     DatePicker dp;
-    TextView main_dday, lover_name;
+    TextView main_dday, lover_name, day100, day300, year1, year2;
     String myName, urName, date, forBG;
     Bitmap bitmap, newBitmap;
     BufferedWriter bw1, bw2;
@@ -189,6 +191,11 @@ public class Second_Activity extends AppCompatActivity {
         main_dday = findViewById(R.id.main_dday);
         lover_name = findViewById(R.id.lover_name);
 
+        day100 = findViewById(R.id.day_100);
+        day300 = findViewById(R.id.day_300);
+        year1 = findViewById(R.id.year1);
+        year2 = findViewById(R.id.year2);
+
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
 
         settingInfos();
@@ -225,7 +232,7 @@ public class Second_Activity extends AppCompatActivity {
             header_image.setImageResource(R.mipmap.test);
         }
 
-        lover_name.setText(myName + " ♥ " + urName);
+        lover_name.setText(myName + " ❤ " + urName);
 
         int year = Integer.parseInt(date.substring(0, 4));
         int month = Integer.parseInt(date.substring(5, 7));
@@ -245,8 +252,24 @@ public class Second_Activity extends AppCompatActivity {
         }else if(countDay < 0){
             main_dday.setText("Day+" + Math.abs(countDay-1) + "❤️");
         }else{
-            main_dday.setText("D-Day❤️");
+            main_dday.setText("Day+1❤️");
         }
+
+        day100.setText("100일: DAY-" + (100 - Math.abs(countDay-1)));
+        day300.setText("300일: DAY-" + (300 - Math.abs(countDay-1)));
+        year1.setText("1년: DAY-" + (365 - Math.abs(countDay-1)));
+        year2.setText("2년: DAY-" + (730 - Math.abs(countDay-1)));
+
+        if(Math.abs(countDay-1) == 100){
+            day100.setVisibility(View.GONE);
+        }else if(Math.abs(countDay-1) == 300){
+            day300.setVisibility(View.GONE);
+        }else if(Math.abs(countDay-1) == 365){
+            year1.setVisibility(View.GONE);
+        }else if(Math.abs(countDay-1) == 730){
+            year2.setVisibility(View.GONE);
+        }
+
     }
 
     public void  FileChange(){

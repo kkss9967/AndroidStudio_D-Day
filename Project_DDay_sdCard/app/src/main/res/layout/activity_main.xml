@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Second_Activity"
-    app:layoutDescription="@xml/activity_main_scene">
+    app:layoutDescription="@xml/activity_main_scene"
+    >
 
     <ImageView
         android:id="@+id/header_image"
@@ -48,11 +49,52 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/text_me_one1"
             android:padding="10dp"
-            android:text="* 종강: Day -10"
-            android:textAlignment="viewStart"
+            android:id="@+id/day_100"
+            android:text="* 100일"
+            android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#D0000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/text_me_one1"
+            android:padding="10dp"
+            android:id="@+id/day_300"
+            android:text="* 300일"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#D0000000"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/text_me_one1"
+            android:padding="10dp"
+            android:id="@+id/year1"
+            android:text="* 1년"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#D0000000"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/text_me_one1"
+            android:padding="10dp"
+            android:id="@+id/year2"
+            android:text="* 2년"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#D0000000"
+            android:textSize="20sp"
+            />
 
         <CalendarView
             android:id="@+id/calendarView2"
