@@ -92,6 +92,8 @@ public class MainActivity extends Activity {
             });
         }else{
             //최초 실행이 아닐 때
+            // 잠금화면 설정이 되어있는지 체크를 여기서 해야 함
+            // Intent 오빠가 만드는 Activity로
             Intent intent = new Intent(getApplicationContext(), Second_Activity.class);
             startActivity(intent);
         }
